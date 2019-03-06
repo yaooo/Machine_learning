@@ -44,21 +44,19 @@ def kNNClassify(newInput, dataSet, labels, k):
         result.append(label)
     return result
 
-f=open("guru99.txt", "w+")
 
-for k in range(5,10):
-     start_time = time.time()
-     outputlabels=kNNClassify(x_test[0:20],x_train,y_train,k)
-     result = y_test[0:20] - outputlabels
-     result = (1 - np.count_nonzero(result)/len(outputlabels))
-     print ("---classification accuracy for knn on mnist: %s ---" %result)
-     print ("---execution time: %s seconds ---" % (time.time() - start_time))
-     f.write("k:"+ str(k) + ", accuracy:" + str(result)+" ,time:" + str(time.time()-start_time))
-f.close()
+# for k in range(5,10):
+#     start_time = time.time()
+#     outputlabels=kNNClassify(x_test[0:20],x_train,y_train,k)
+#     result = y_test[0:20] - outputlabels
+#     result = (1 - np.count_nonzero(result)/len(outputlabels))
+#     print ("---classification accuracy for knn on mnist: %s ---" %result)
+#     print ("---execution time: %s seconds ---" % (time.time() - start_time))
 
-#start_time = time.time()
-#outputlabels=kNNClassify(x_test[0:20],x_train,y_train, 4)
-#result = y_test[0:20] - outputlabels
-#result = (1 - np.count_nonzero(result)/len(outputlabels))
-#print ("---classification accuracy for knn on mnist: %s ---" %result)
-#print ("---execution time: %s seconds ---" % (time.time() - start_time))
+
+start_time = time.time()
+outputlabels=kNNClassify(x_test[0:20],x_train,y_train, 4)
+result = y_test[0:20] - outputlabels
+result = (1 - np.count_nonzero(result)/len(outputlabels))
+print ("---classification accuracy for knn on mnist: %s ---" %result)
+print ("---execution time: %s seconds ---" % (time.time() - start_time))
