@@ -1,10 +1,9 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3.6
 # coding: utf-8
 
 # In[1]:
 
 
-from __future__ import print_function
 import numpy as np
 import pickle
 
@@ -21,8 +20,8 @@ def load(file_name):
     # Normalize the images
     training_images.astype('float32')
     testing_images.astype('float32')
-    training_images = training_images/255.
-    testing_images = testing_images/255.
+    training_images = training_images/255
+    testing_images = testing_images/255
     return training_images, training_labels, testing_images, testing_labels
 
 def softmax(z):
@@ -58,7 +57,7 @@ def relu_prime(z):
 #     a1_delta = z1_delta.relu_prime(a1)
 
 
-# In[9]:
+# In[3]:
 
 
 class Dense:
@@ -83,7 +82,7 @@ class Dense:
         return grad_input
 
 
-# In[10]:
+# In[4]:
 
 
 class ReLU:
@@ -97,7 +96,7 @@ class ReLU:
         return output*relu_prime(input)
 
 
-# In[11]:
+# In[5]:
 
 
 def softmax_crossentropy(X, y):
@@ -108,14 +107,15 @@ def softmax_crossentropy(X, y):
     return loss
 
 def grad_softmax_crossentropy(X, y):
+    m = y.shape[0]
     ones_for_answers = np.zeros_like(X)
     ones_for_answers[np.arange(len(X)),y] = 1
     
     p = np.exp(X) / np.exp(X).sum(axis=-1,keepdims=True)
-    return (- ones_for_answers + p) / X.shape[0]
+    return (- ones_for_answers + p) / m
 
 
-# In[12]:
+# In[6]:
 
 
 def forward(network, X):
@@ -132,7 +132,7 @@ def predict(network,X):
 def train(network,X,y):
     # Get the layer activations
     layer_activations = forward(network,X)
-    layer_inputs = [X]+layer_activations  #layer_input[i] is an input for network[i]
+    layer_inputs = [X]+layer_activations
     out = layer_activations[-1]
     
     # Compute the loss and the initial gradient
@@ -144,10 +144,9 @@ def train(network,X,y):
     
 
 
-# In[20]:
+# In[7]:
 
 
-from random import shuffle
 from time import time
 def main():
     # Load the dataset
@@ -175,6 +174,7 @@ def main():
         init_time = time()
         for i in range(0, len(X_train) - batchsize + 1, batchsize):
             interval = slice(i, i + batchsize)
+            
             x_batch,y_batch =  X_train[interval], y_train[interval]
             train(network,x_batch,y_batch)
             
@@ -185,8 +185,8 @@ def main():
         
         acc1 = predict(network,X_test)==y_test
         val_log.append(np.count_nonzero(acc1 == 1)/len(y_test))
-        
-        print("\nEpoch",epoch)
+        print("******************************************")
+        print("Epoch",epoch)
         print("Training accuracy:",train_log[-1])
         print("Validation accuracy:",val_log[-1])
         print("Training Time:", time_log[-1], "sec")
@@ -194,16 +194,3 @@ def main():
     
 if __name__ == '__main__':
     main()
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
