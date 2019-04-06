@@ -169,22 +169,3 @@ def main():
     print ('Traning and Testing total excution time is: %s seconds ' % (time1-time0))   
 if __name__ == '__main__':
     main()
-
-
-# In[ ]:
-
-
-an
-
-
-# In[ ]:
-
-
-
-
-
-# In[ ]:
-
-
-
-
