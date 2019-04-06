@@ -12,7 +12,7 @@ jupyter notebook
 Alternatively, to completely run the code once again:
 ```
 cd to the project directory
-jupyter notebook
+python <code.py>
 ```
 
 Code run on Jupyter notebook:
