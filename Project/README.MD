@@ -1,4 +1,4 @@
-# Machine Learning Homework 4
+# Machine Learning Project
 ## Prerequisites
 Python 3 required.
 Additional python pakages have to be installed based on the requirements.
@@ -16,7 +16,7 @@ jupyter notebook
 
 ## Model
 * acc_95_83.h5---------->> 95% training accuracy, 83% validation accuracy
-* acc_88_83.h5 --------->> 88% training accuracy, 83% validation accuracy
+* acc_90_83.h5 --------->> 90% training accuracy, 83% validation accuracy
 * acc_87_80.h5 --------->> 87% training accuracy, 80% validation accuracy
 
 ## Author
