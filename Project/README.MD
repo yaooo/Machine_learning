@@ -23,6 +23,10 @@ python <code>.py
 2. https://github.com/Shenggan/BCCD_Dataset
 
 ## Code Description
+* Training.py: <br>
+The source code of the network built for training the model. (Note: Due to the initialization of weights, dropout layer and image_generator, it might take a couple of tries in order to get a good model trained.)
+
+
 * testing_model.py: <br>
 Used to load the model, get the validation loss and validation accuracy for the testing and training dataset, and output the confusion matrix.
 
