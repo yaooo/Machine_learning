@@ -1,4 +1,4 @@
-# Machine Learning Project
+# Machine Learning Homework 5
 ## Objective 
 [Prune a LeNet-5 on MNIST dataset](https://github.com/yaooo/Machine_learning/blob/master/HW5/hw5.pdf)
 
