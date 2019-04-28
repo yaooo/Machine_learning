@@ -1,4 +1,8 @@
 # Homework 3
+
+## Objective 
+[Build a FC layer‐based neural network to recognize hand‐written digits](https://github.com/yaooo/Machine_learning/blob/master/HW3/hw3.pdf)
+
 ## Prerequisites
 Python 3 required.
 Additional python pakages have to be installed based on the requirements.  
