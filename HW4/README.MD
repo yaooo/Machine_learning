@@ -1,4 +1,8 @@
 # Machine Learning Homework 4
+
+## Objective 
+[Build LeNet for colorful image classification (Refer to this PDF)](https://github.com/yaooo/Machine_learning/blob/master/HW4/hw4.pdf)
+
 ## Prerequisites
 Python 3 required.
 Additional python pakages have to be installed based on the requirements.
