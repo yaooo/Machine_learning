@@ -41,6 +41,11 @@ The running history of "testing_model.py".
 * acc_87_80.h5 --------->> 87% training accuracy, 80% validation accuracy
 
 
+## Result
+![Confusion matrix](Normalized_CM.png)
+![Accuracy after 30 epochs](logs/network-1554001569/Accuracy.png)
+![Loss after 30 epochs](logs/network-1554001569/Loss.png)
+
 ## Acknowledgements:
 https://github.com/Shenggan/BCCD_Dataset MIT License
 
